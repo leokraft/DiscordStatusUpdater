@@ -9,6 +9,7 @@ Clone the repository, `cd` into it and run `npm install`.
 
 ## Usage
 
+<sub>_USE AT YOUR OWN RISK_</sub>
 ### CLI
 
 Update your discord status by running
