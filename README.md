@@ -2,15 +2,20 @@
 
 Allowes to change the Discord profile status.
 
-### Install
+## Install
 
 Clone the repository, `cd` into it and run `npm install`.
 
-### Usage
+## Usage
 
-Inside of the `main.js` configure `afterLogin()`.\
-You can choose between `online`, `dnd`, `idle` and `invisible`.\
-\
-To run enter `node main.js` in your terminal.\
-If your auth token is not inside your enviroment variables you will get prompted to enter your Discord Email and Password.
+### CLI
 
+Update your discord status by running `node status.js --status=NEW_STATUS` where `NEW_STATUS` can be either `online`, `dnd`, `idle` or `invisible`.\
+To get further information run `node status.js --help`.
+
+### Module
+
+Inside your code import status using `var status = require('YOUR_PATH/status.js')` afterwards you may use `status.setStatus(NEW_STATUS)` where `NEW_STATUS` can be either `online`, `dnd`, `idle` or `invisible`.\
+
+However if you have not set your auth token using the `DISCORD_TOKEN` enviroment variable `setStatus` will fail.\
+To prevent this either set `DISCORD_TOKEN` or use `status.login(EMAIL, PASSWORD)` to login to your Discord account. This will automatically set the `DISCORD_TOKEN` enviroment variable.
