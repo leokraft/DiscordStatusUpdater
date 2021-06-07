@@ -11,12 +11,35 @@ Clone the repository, `cd` into it and run `npm install`.
 
 ### CLI
 
-Update your discord status by running `node status.js --status=NEW_STATUS` where `NEW_STATUS` can be either `online`, `dnd`, `idle` or `invisible`.\
+Update your discord status by running
+```sh
+node status.js --status=NEW_STATUS
+```
+where `NEW_STATUS` can be one of 
+- online
+- dnd
+- idle
+- invisible
 To get further information run `node status.js --help`.
 
 ### Module
 
-Inside your code import status using `var status = require('YOUR_PATH/status.js')` afterwards you may use `status.setStatus(NEW_STATUS)` where `NEW_STATUS` can be either `online`, `dnd`, `idle` or `invisible`.\
+Inside your code import `status` using
+```js
+var status = require('YOUR_PATH/status.js')
+
+status.setStatus(NEW_STATUS)
+```
+where `NEW_STATUS` can be one of 
+- online
+- dnd
+- idle
+- invisible
 
 However if you have not set your auth token using the `DISCORD_TOKEN` enviroment variable `setStatus` will fail.\
-To prevent this either set `DISCORD_TOKEN` or use `status.login(EMAIL, PASSWORD)` to login to your Discord account. This will automatically set the `DISCORD_TOKEN` enviroment variable.
+To prevent this either set `DISCORD_TOKEN` or use 
+```js
+status.login(EMAIL, PASSWORD)
+```
+to login to your Discord account.\
+This will automatically set the `DISCORD_TOKEN` enviroment variable.
