@@ -1,6 +1,7 @@
-# DiscordStatusUpdater
+# Discord status updater
 
 Allowes to change the Discord profile status.
+Also includes a function to login to discord and receive the auth token. (might be seperated in the future)
 
 ## Install
 
