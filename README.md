@@ -23,6 +23,8 @@ where `NEW_STATUS` can be one of
 
 To get further information run `node status.js --help`.
 
+> use `-t`flag to log you auth. token to console
+
 ### Module
 ---
 Inside your code import `status` using
